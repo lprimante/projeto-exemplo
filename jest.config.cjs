@@ -1,6 +1,7 @@
 module.exports = {
     collectCoverage: true,
     collectCoverageFrom: ['**/*.{ts,tsx}'],
+    setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
     coveragePathIgnorePatterns: [
         '/node_modules/',
         '__mocks__',
@@ -21,6 +22,7 @@ module.exports = {
     ],
     coverageReporters: ['lcov'],
     moduleDirectories: ['node_modules', 'src'],
+    prettierPath: null,
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     moduleNameMapper: {
         '\\.css': '<rootDir>/src/__mocks__/styleMock.ts',
