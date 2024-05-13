@@ -1,12 +1,15 @@
 import { BrowserRouter as Router, Switch } from 'react-router-dom'
+import { TodosContextProvider } from './context'
 import Routes from './router'
 
 function App() {
     return (
         <Router>
-            <Switch>
-                <Routes />
-            </Switch>
+            <TodosContextProvider>
+                <Switch>
+                    <Routes />
+                </Switch>
+            </TodosContextProvider>
         </Router>
     )
 }
