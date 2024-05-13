@@ -1,5 +1,5 @@
 import React, { createContext, ReactNode, useContext, useState } from 'react'
-import type { Todos } from '../../typings/todos'
+import type { TodosType } from '../../typings/todos'
 
 interface TodosContextProviderProps {
     children: ReactNode
@@ -9,12 +9,14 @@ interface TodosContextProps {
     state: {
         isError: boolean
         isLoading: boolean
-        todos: Array<Todos>
+        todos: Array<TodosType>
+        seletedTodo: TodosType | undefined
     }
     operations: {
         setIsLoading: (state: boolean) => void
         setIsError: (state: boolean) => void
-        setTodos: React.Dispatch<React.SetStateAction<Array<Todos>>>
+        setTodos: React.Dispatch<React.SetStateAction<Array<TodosType>>>
+        setSelectedTodo: React.Dispatch<React.SetStateAction<TodosType | undefined>>
     }
 }
 
@@ -23,7 +25,8 @@ export const TodosContext = createContext({} as TodosContextProps)
 export function TodosContextProvider({ children }: TodosContextProviderProps) {
     const [isLoading, setIsLoading] = useState(true)
     const [isError, setIsError] = useState(false)
-    const [todos, setTodos] = useState<Array<Todos>>([])
+    const [todos, setTodos] = useState<Array<TodosType>>([])
+    const [seletedTodo, setSelectedTodo] = useState<TodosType | undefined>()
 
     return (
         <TodosContext.Provider
@@ -32,11 +35,13 @@ export function TodosContextProvider({ children }: TodosContextProviderProps) {
                     isError,
                     isLoading,
                     todos,
+                    seletedTodo,
                 },
                 operations: {
                     setIsLoading,
                     setIsError,
                     setTodos,
+                    setSelectedTodo,
                 },
             }}
         >
@@ -49,4 +54,4 @@ export function useTodosContext(): TodosContextProps {
 
     return context
 }
-export { Todos }
+export { TodosType }
