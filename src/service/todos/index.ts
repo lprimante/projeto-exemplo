@@ -1,5 +1,5 @@
 import { useCallback } from 'react'
-import { TodosType } from 'typings'
+import { TodosType } from '../../typings'
 
 export const useTodosService = () => {
     const baseUrl = 'https://jsonplaceholder.typicode.com'

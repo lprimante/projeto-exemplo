@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { useApiMockData } from './constants'
 
 jest.mock('service/todos', () => ({

@@ -4,8 +4,10 @@
         "useDefineForClassFields": true,
         "lib": ["ES2020", "DOM", "DOM.Iterable"],
         "module": "ESNext",
+        "outDir": "dist",
         "skipLibCheck": true,
         "composite": true,
+        "sourceMap": true,
         "moduleResolution": "Node",
         "allowImportingTsExtensions": true,
         "allowSyntheticDefaultImports": true,
@@ -16,7 +18,7 @@
         "noImplicitAny": true,
         "strictNullChecks": true,
         "declaration": true,
-        "baseUrl": "./src/",
+        "baseUrl": "./",
         "isolatedModules": true,
         "noEmit": true,
         "jsx": "react-jsx",
@@ -24,8 +26,8 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
-        "types": ["@testing-library/jest-dom"]
+        "types": ["@testing-library/jest-dom", "@types/jest"]
     },
     "include": ["vite.config.ts", "./src/**/**.*"],
-    "exclude": ["node_modules", "./src/**/*.spec.ts", "./src/**/*.spec.tsx"]
+    "exclude": ["node_modules", "./src/**/*.spec.ts", "./src/**/*.spec.tsx", "dist"]
 }

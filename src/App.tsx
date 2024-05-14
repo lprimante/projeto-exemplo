@@ -4,7 +4,7 @@ import Routes from './router'
 
 function App() {
     return (
-        <Router forceRefresh>
+        <Router basename="/projeto-exemplo">
             <TodosContextProvider>
                 <Switch>
                     <Routes />

@@ -8,7 +8,7 @@ import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
 
 import { useTodos } from '../../hooks/useTodos'
-import { TodosType } from 'context'
+import { TodosType } from '../../context'
 import CircularProgress from '@mui/material/CircularProgress'
 
 interface ParamsType {
