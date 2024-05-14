@@ -34,7 +34,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20.9.0
-          cache: '.yarn'
+          cache: 'yarn'
       - name: Install yarn
         run: npm install yarn
       - name: Install dependencies
