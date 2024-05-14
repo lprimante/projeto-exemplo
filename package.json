@@ -3,7 +3,7 @@
     "private": true,
     "version": "1.0.0",
     "type": "module",
-    "homepage": "https://lprimante.github.io/projeto-exemplo",
+    "homepage": "https://lprimante.github.io/projeto-exemplo/",
     "engine": {
         "node": "<=20",
         "yarn": ">=1.22.5",
