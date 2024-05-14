@@ -1,30 +1,66 @@
-# React + TypeScript + Vite
+# Projeto Exemplo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação frontend de um To Do List, utilizando as seguintes libs e frameworks:
 
-Currently, two official plugins are available:
+-   React
+-   Typescript
+-   Vite
+-   Jest
+-   React Testing Library
+-   Material UI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+</br>
 
-## Expanding the ESLint configuration
+## **Pré-requisitos**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Utilize a versão do node >= 20, você pode usar o **nvm** para rodar esta versão, [seguindo estas intruções de instalação.](https://github.com/nvm-sh/nvm)
 
-- Configure the top-level `parserOptions` property like this:
+Este projeto foi criado utilizando o [yarn](https://yarnpkg.com/), recomendamos que faço uso dele ao rodar localmente.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+</br>
+
+Para o desenvolvimento local siga as seguintes instruções no terminal:
+
+```
+git clone https://github.com/lprimante/projeto-exemplo.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Depois acesse o projeto:
+
+```
+cd projeto-exemplo
+```
+
+Instale as dependências:
+
+```
+yarn
+```
+
+</br>
+
+## **Desenvolvimento local**
+
+Para rodar seu projeto localmente, utilize o comando:
+
+```
+yarn dev
+```
+
+Para rodar a suite de testes:
+
+```
+yarn test
+```
+
+Para gerar uma build:
+
+```
+yarn build
+```
+
+Para rodar uma build localmente:
+
+```
+yarn preview
+```
