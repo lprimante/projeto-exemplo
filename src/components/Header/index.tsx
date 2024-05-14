@@ -43,9 +43,9 @@ export const Header = ({ title }: HeaderProps) => {
             </Typography>
             <Divider />
             <List>
-                {navItems.map(item => (
+                {navItems.map((item, index) => (
                     <Link to={item.link}>
-                        <ListItem key={item.name} disablePadding>
+                        <ListItem key={index} disablePadding>
                             <ListItemButton sx={{ textAlign: 'center' }}>
                                 <ListItemText primary={item.name} />
                             </ListItemButton>
@@ -76,8 +76,8 @@ export const Header = ({ title }: HeaderProps) => {
                         {title}
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        {navItems.map(item => (
-                            <Button onClick={() => handleClink(item.link)} key={item.name} sx={{ color: '#fff' }}>
+                        {navItems.map((item, index) => (
+                            <Button onClick={() => handleClink(item.link)} key={index} sx={{ color: '#fff' }}>
                                 {item.name}
                             </Button>
                         ))}

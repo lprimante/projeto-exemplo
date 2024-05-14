@@ -1,15 +1,9 @@
-import Typography from '@mui/material/Typography'
-import Checkbox from '@mui/material/Checkbox'
-import ListItem from '@mui/material/ListItem'
-import List from '@mui/material/List'
+import { useNavigate } from 'react-router-dom'
+import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 
-import { useTodos } from '../../hooks/useTodos'
-import { Header } from '../../components/Header'
-
-import { useNavigate } from 'react-router-dom'
-import CircularProgress from '@mui/material/CircularProgress'
-import Box from '@mui/material/Box'
+import { useTodos } from '../../hooks'
+import { Header, ToDoList } from '../../components'
 
 export const Home = () => {
     const { isLoading, todos, updateTodoComplete } = useTodos()
@@ -23,9 +17,8 @@ export const Home = () => {
     const handleEdit = (id?: number) => {
         if (id) {
             navigate(`/todo/${id}`)
+            return
         }
-        navigate('/adiciona-todo')
-        return
     }
 
     const onDelete = (id?: number) => {
@@ -47,47 +40,16 @@ export const Home = () => {
             }}
         >
             <Header title={'Minha Lista de Tarefas'} />
-            <Button size="large" variant="contained" color="primary" onClick={() => handleEdit()} sx={{ m: 10 }}>
+            <Button size="large" variant="contained" color="primary" onClick={() => navigate('/adiciona-todo')} sx={{ m: 10 }}>
                 {'Adicionar Nova Tarefa'}
             </Button>
-            <List>
-                {isLoading && todos.length < 0 ? (
-                    <CircularProgress />
-                ) : (
-                    todos.map(todo => (
-                        <ListItem
-                            sx={{
-                                width: '80%',
-                                margin: 'auto',
-                                display: 'flex',
-                                justifyContent: 'space-around',
-                                border: '1px solid light-gray',
-                            }}
-                            key={todo.id}
-                        >
-                            <Checkbox
-                                checked={todo.completed}
-                                onChange={handleSelectChange}
-                                name={todo.title}
-                                id={todo.id?.toString()}
-                            />
-                            <Typography
-                                variant="h6"
-                                component="p"
-                                sx={{ width: '70%', textDecoration: todo.completed ? 'line-through' : 'none' }}
-                            >
-                                {todo.title}
-                            </Typography>
-                            <Button onClick={() => handleEdit(todo.id)} variant="contained" sx={{ ml: 10 }}>
-                                Editar
-                            </Button>
-                            <Button onClick={() => onDelete(todo.id)} color="secondary" variant="contained" sx={{ ml: 10 }}>
-                                Deletar
-                            </Button>
-                        </ListItem>
-                    ))
-                )}
-            </List>
+            <ToDoList
+                isLoading={isLoading}
+                todos={todos}
+                onDelete={onDelete}
+                handleEdit={handleEdit}
+                handleSelectChange={handleSelectChange}
+            />
         </Box>
     )
 }
