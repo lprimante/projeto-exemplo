@@ -7,13 +7,13 @@ import Button from '@mui/material/Button'
 import { useTodos } from '../../hooks/useTodos'
 import { Header } from '../../components/Header'
 
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import CircularProgress from '@mui/material/CircularProgress'
 import Box from '@mui/material/Box'
 
 export const Home = () => {
     const { isLoading, todos, updateTodoComplete } = useTodos()
-    const history = useHistory()
+    const navigate = useNavigate()
 
     const handleSelectChange = (event: React.ChangeEvent<HTMLInputElement>, checked: boolean) => {
         const todoCompleted = parseInt(event.target.id)
@@ -22,15 +22,15 @@ export const Home = () => {
 
     const handleEdit = (id?: number) => {
         if (id) {
-            history.push(`/todo/${id}`)
+            navigate(`/todo/${id}`)
         }
-        history.push('/adiciona-todo')
+        navigate('/adiciona-todo')
         return
     }
 
     const onDelete = (id?: number) => {
         console.log(id)
-        history.push(`/todo/${id}`)
+        navigate(`/todo/${id}`)
     }
 
     return (

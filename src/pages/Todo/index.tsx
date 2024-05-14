@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { useHistory, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 import { Header } from '../../components/Header'
 import Container from '@mui/material/Container'
@@ -11,22 +11,16 @@ import { useTodos } from '../../hooks/useTodos'
 import { TodosType } from '../../context'
 import CircularProgress from '@mui/material/CircularProgress'
 
-interface ParamsType {
-    id: string
-}
-
 export const TodoModify = () => {
     const { getTodoById, saveTodo, seletedTodo } = useTodos()
-    const { id } = useParams<ParamsType>()
-    const history = useHistory()
+    const { id } = useParams()
+    const navigate = useNavigate()
     const isEdit = useMemo(() => !!id, [id])
     const [inputText, setInputText] = useState<string>()
     const [inputTodo, setInputTodo] = useState<TodosType>()
 
-    console.log('mudou de página - Todo')
-
     useEffect(() => {
-        if (isEdit) {
+        if (isEdit && id) {
             getTodoById(parseInt(id))
         }
     }, [isEdit])
@@ -54,7 +48,7 @@ export const TodoModify = () => {
             await saveTodo(inputTodo)
             setInputText('')
         }
-        return history.push('/')
+        return navigate('/')
     }
 
     return isEdit && !seletedTodo ? (

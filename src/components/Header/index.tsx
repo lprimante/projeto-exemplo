@@ -1,4 +1,4 @@
-import { Link, useHistory } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
@@ -26,14 +26,14 @@ export const Header = ({ title }: HeaderProps) => {
         { name: 'Entrar', link: '/entrar' },
     ]
     const [mobileOpen, setMobileOpen] = useState(false)
-    const history = useHistory()
+    const navigate = useNavigate()
 
     const handleDrawerToggle = () => {
         setMobileOpen(prevState => !prevState)
     }
 
     const handleClink = (link: string) => {
-        history.push(link)
+        navigate(link)
     }
 
     const drawer = (
