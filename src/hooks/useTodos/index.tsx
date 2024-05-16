@@ -59,7 +59,6 @@ export function useTodos() {
 
     return {
         ...state,
-        ...operations,
         getTodos,
         updateTodoComplete,
         getTodoById,
