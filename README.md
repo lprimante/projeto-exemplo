@@ -13,7 +13,7 @@ Aplicação frontend de um To Do List, utilizando as seguintes libs e frameworks
 
 ## **Pré-requisitos**
 
-Utilize a versão do node >= 20, você pode usar o **nvm** para rodar esta versão, [seguindo estas intruções de instalação.](https://github.com/nvm-sh/nvm)
+Utilize a versão do node >= 20, você pode usar o **nvm** para rodar esta versão, [seguindo estas instruções de instalação.](https://github.com/nvm-sh/nvm)
 
 Este projeto foi criado utilizando o [yarn](https://yarnpkg.com/), recomendamos que faço uso dele ao rodar localmente.
 
