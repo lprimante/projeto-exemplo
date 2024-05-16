@@ -43,12 +43,14 @@ export const TodoModify = () => {
         })
     }
 
-    const handleClick = async () => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        console.log(event, 'submit')
+        event.preventDefault()
         if (inputTodo) {
             await saveTodo(inputTodo)
             setInputText('')
         }
-        return navigate('/')
+        navigate('/')
     }
 
     return isEdit && !seletedTodo ? (
@@ -56,20 +58,21 @@ export const TodoModify = () => {
     ) : (
         <Container>
             <Header title={isEdit ? 'Editar Minha Tarefa' : 'Criar Minha Tarefa'} />
-            <Box sx={{ my: 4, display: 'flex' }}>
+            <Box component="form" onSubmit={handleSubmit} sx={{ my: 4, display: 'flex' }}>
                 <TextField
                     variant="outlined"
                     onChange={onChange}
                     value={inputText}
+                    autoFocus
                     defaultValue={inputText}
                     label="Escreva sua tarefa"
                     sx={{ mr: 2 }}
                 />
                 <Button
+                    type="submit"
                     size="large"
                     variant={isEdit ? 'outlined' : 'contained'}
                     color="primary"
-                    onClick={handleClick}
                     disabled={inputText ? false : true}
                 >
                     {isEdit ? 'Editar Tarefa' : 'Adicionar Tarefa'}
