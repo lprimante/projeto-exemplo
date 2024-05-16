@@ -7,10 +7,12 @@ import Paper from '@mui/material/Paper'
 import TextField from '@mui/material/TextField'
 import Box from '@mui/material/Box'
 import { Header } from '../../components'
+import { useNavigate } from 'react-router-dom'
 
 export const Login = () => {
     const [checked, setChecked] = useState(true)
     const [inputTextError, setInputTextError] = useState('')
+    const navigate = useNavigate()
 
     const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setChecked(event.target.checked)
@@ -28,6 +30,7 @@ export const Login = () => {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         console.log(event, 'submit')
+        navigate('/')
     }
 
     return (
@@ -73,7 +76,9 @@ export const Login = () => {
                             />
                         </Grid>
                         <Grid item xs={12}>
-                            <Button fullWidth> Entrar </Button>
+                            <Button type="submit" fullWidth>
+                                {'Entrar'}
+                            </Button>
                         </Grid>
                     </Grid>
                 </Paper>
