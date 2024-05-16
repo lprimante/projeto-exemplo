@@ -8,6 +8,7 @@ const AppRoutes = () => {
             <Route path="todo/:id" element={<TodoModify />} />
             <Route path="adiciona-todo" element={<TodoModify />} />
             <Route path="entrar" element={<Login />} />
+            <Route path="*" element={<div> Página Não Encontrada.</div>} />
         </Routes>
     )
 }
