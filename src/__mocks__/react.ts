@@ -1,11 +1,10 @@
-const mockSetInitialState: never[] = []
-const initialState = jest.fn((newState = mockSetInitialState) => newState)
+const mockUseState = jest.fn(init => [init, jest.fn()])
 
 jest.mock('react', () => {
     const react = jest.requireActual('react')
     return {
         ...react,
         useCallback: jest.fn(fn => fn),
-        useState: jest.fn(() => [initialState(), mockSetInitialState]),
+        useState: mockUseState,
     }
 })
