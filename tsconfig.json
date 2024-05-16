@@ -19,15 +19,15 @@
         "strictNullChecks": true,
         "declaration": true,
         "baseUrl": "./",
-        "isolatedModules": true,
+        "isolatedModules": false,
         "noEmit": true,
         "jsx": "react-jsx",
         "strict": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true,
-        "types": ["@testing-library/jest-dom", "@types/jest"]
+        "noFallthroughCasesInSwitch": true
     },
     "include": ["vite.config.ts", "./src/**/**.*"],
-    "exclude": ["node_modules", "./src/**/*.spec.ts", "./src/**/*.spec.tsx", "dist"]
+    "exclude": ["node_modules", "dist"],
+    "types": ["@testing-library/jest-dom", "@types/jest"]
 }

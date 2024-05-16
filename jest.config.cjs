@@ -22,21 +22,15 @@ module.exports = {
     ],
     coverageReporters: ['lcov'],
     moduleDirectories: ['node_modules', 'src'],
-    prettierPath: null,
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-    moduleNameMapper: {
-        '\\.css': '<rootDir>/src/__mocks__/styleMock.ts',
-        '^.+\\.svg$': '<rootDir>/src/__mocks__/svgrMock.js',
-    },
     preset: 'ts-jest',
-    testEnvironment: 'node',
     roots: ['<rootDir>/src'],
     testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
-    testEnvironment: 'jsdom',
+    testEnvironment: 'jest-environment-jsdom',
     transform: {
         // '^.+\\.[tj]sx?$' to process js/ts with `ts-jest`
         // '^.+\\.m?[tj]sx?$' to process js/ts/mjs/mts with `ts-jest`
-        '^.+\\.[tj]sx?$': [
+        '^.+\\.tsx?$': [
             'ts-jest',
             {
                 isolatedModules: true,
