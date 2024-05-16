@@ -9,6 +9,7 @@ Aplicação frontend de um To Do List, utilizando as seguintes libs e frameworks
 -   React Testing Library
 -   Material UI
 
+Link do projeto: https://lprimante.github.io/projeto-exemplo/
 </br>
 
 ## **Pré-requisitos**
