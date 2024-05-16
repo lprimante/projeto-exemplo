@@ -2,23 +2,21 @@ import Typography from '@mui/material/Typography'
 import Checkbox from '@mui/material/Checkbox'
 import ListItem from '@mui/material/ListItem'
 import List from '@mui/material/List'
-import CircularProgress from '@mui/material/CircularProgress'
 import { TodosType } from 'src/typings'
 import Button from '@mui/material/Button'
 
 interface ToDoListProps {
-    isLoading: boolean
     todos: Array<TodosType>
     onDelete: (id?: number) => void
     handleEdit: (id?: number) => void
     handleSelectChange: (event: React.ChangeEvent<HTMLInputElement>, checked: boolean) => void
 }
 
-export const ToDoList = ({ isLoading, todos, handleSelectChange, handleEdit, onDelete }: ToDoListProps) => {
+export const ToDoList = ({ todos, handleSelectChange, handleEdit, onDelete }: ToDoListProps) => {
     return (
         <List>
-            {isLoading && todos.length < 0 ? (
-                <CircularProgress />
+            {todos.length <= 0 ? (
+                <Typography> Você não tem tarefas cadastradas! </Typography>
             ) : (
                 todos.map(todo => (
                     <ListItem
@@ -29,7 +27,7 @@ export const ToDoList = ({ isLoading, todos, handleSelectChange, handleEdit, onD
                             justifyContent: 'space-around',
                             border: '1px solid light-gray',
                         }}
-                        key={todo?.id}
+                        key={`list-${todo?.id}`}
                     >
                         <Checkbox
                             checked={todo?.completed}

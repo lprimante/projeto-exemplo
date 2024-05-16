@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot of Home 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MuiBox-root css-w59kgq"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary css-1tzvoec-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Adicionar Nova Tarefa
+        </button>
+        <div
+          class="MuiBox-root css-k008qs"
+        >
+          <nav
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-11b3ww9-MuiPaper-root-MuiAppBar-root"
+          >
+            <div
+              class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+            >
+              <button
+                aria-label="open drawer"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-6iz4mj-MuiButtonBase-root-MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="MenuIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"
+                  />
+                </svg>
+              </button>
+              <div
+                class="MuiTypography-root MuiTypography-h6 css-p7bec2-MuiTypography-root"
+              >
+                Minha Lista de Tarefas
+              </div>
+              <div
+                class="MuiBox-root css-130f8nx"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1kkpk3h-MuiButtonBase-root-MuiButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  Home
+                </button>
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1kkpk3h-MuiButtonBase-root-MuiButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  Entrar
+                </button>
+              </div>
+            </div>
+          </nav>
+          <nav />
+        </div>
+        <span
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-18lrjg1-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 40px; height: 40px;"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20.2"
+              stroke-width="3.6"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiBox-root css-w59kgq"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary css-1tzvoec-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
+      >
+        Adicionar Nova Tarefa
+      </button>
+      <div
+        class="MuiBox-root css-k008qs"
+      >
+        <nav
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-11b3ww9-MuiPaper-root-MuiAppBar-root"
+        >
+          <div
+            class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+          >
+            <button
+              aria-label="open drawer"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeMedium css-6iz4mj-MuiButtonBase-root-MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="MenuIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"
+                />
+              </svg>
+            </button>
+            <div
+              class="MuiTypography-root MuiTypography-h6 css-p7bec2-MuiTypography-root"
+            >
+              Minha Lista de Tarefas
+            </div>
+            <div
+              class="MuiBox-root css-130f8nx"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1kkpk3h-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                Home
+              </button>
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1kkpk3h-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                Entrar
+              </button>
+            </div>
+          </div>
+        </nav>
+        <nav />
+      </div>
+      <span
+        class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-18lrjg1-MuiCircularProgress-root"
+        role="progressbar"
+        style="width: 40px; height: 40px;"
+      >
+        <svg
+          class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+          viewBox="22 22 44 44"
+        >
+          <circle
+            class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+            cx="44"
+            cy="44"
+            fill="none"
+            r="20.2"
+            stroke-width="3.6"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

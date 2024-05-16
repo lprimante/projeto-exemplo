@@ -1,9 +1,7 @@
 import { useNavigate } from 'react-router-dom'
-import Box from '@mui/material/Box'
-import Button from '@mui/material/Button'
-
 import { useTodos } from '../../hooks'
-import { Header, ToDoList } from '../../components'
+import { Header, ToDoList, Button } from '../../components'
+import { Box, CircularProgress } from '@mui/material'
 
 export const Home = () => {
     const { isLoading, todos, updateTodoComplete } = useTodos()
@@ -26,6 +24,10 @@ export const Home = () => {
         navigate(`/todo/${id}`)
     }
 
+    const handleClick = () => {
+        navigate('/adiciona-todo')
+    }
+
     return (
         <Box
             sx={{
@@ -39,17 +41,13 @@ export const Home = () => {
                 justifyContent: 'center',
             }}
         >
+            <Button onClick={handleClick} text={'Adicionar Nova Tarefa'} />
             <Header title={'Minha Lista de Tarefas'} />
-            <Button size="large" variant="contained" color="primary" onClick={() => navigate('/adiciona-todo')} sx={{ m: 10 }}>
-                {'Adicionar Nova Tarefa'}
-            </Button>
-            <ToDoList
-                isLoading={isLoading}
-                todos={todos}
-                onDelete={onDelete}
-                handleEdit={handleEdit}
-                handleSelectChange={handleSelectChange}
-            />
+            {isLoading ? (
+                <CircularProgress />
+            ) : (
+                <ToDoList todos={todos} onDelete={onDelete} handleEdit={handleEdit} handleSelectChange={handleSelectChange} />
+            )}
         </Box>
     )
 }
